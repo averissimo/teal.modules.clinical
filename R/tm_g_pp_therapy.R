@@ -188,7 +188,8 @@ template_therapy <- function(dataname = "ANL",
         ggtheme +
         theme
 
-      print(therapy_plot)
+      grid::grid.newpage()
+      grid::grid.draw(therapy_plot)
     }, env = c(
       list(
         dataname = as.name(dataname),
